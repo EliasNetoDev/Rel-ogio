@@ -1,5 +1,24 @@
-var agora = new Date();
+function attTempo(){
 
-var horario = agora.getHours() + ':' + agora.getMinutes() + ':' + agora.getSeconds();
+    var display = document.querySelector('.display')
 
-console.log(horario);
+    var agora = new Date();
+
+    var horario = corrigirHorario(agora.getHours()) + ':' + corrigirHorario(agora.getMinutes()) + ':' + corrigirHorario(agora.getSeconds());
+
+    display.textContent = horario;
+
+}
+
+function corrigirHorario(numero){
+
+    if(numero < 10){
+        numero = "0" + numero;
+    }
+
+    return numero;
+}
+
+
+attTempo();
+setInterval(attTempo, 1000);
