@@ -15,6 +15,12 @@
     flex-direction: column;
 }
 
+/* Estilização do Display */
+.display{
+    font-size: 200px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
 /* Imagem de fundo */
 
 body{
